@@ -1,0 +1,196 @@
+/* 
+            //button ToSave & ToCanel
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Text('Cancel'),
+                ),
+                SizedBox(width: 10),
+                ElevatedButton(
+                  onPressed: () {
+                    final task = TaskData(
+                      title: titlectrl.text,
+                      description: descripCtrl.text,
+                      priority: 0,
+                      duedate: DateTime.now().add(Duration(days: 1)),
+                      completedSubTasks: 0,
+                      totalsubtasks: 5,
+                      status: 'ToDo',
+                      userEmail: userMail.toString(),
+                    );
+                    listBox.addTask(task);
+                    Navigator.of(context).pop();
+                    //add to taskList
+                  },
+
+                  child: Text('Add'),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ), */
+
+//Due:${dueDateCtrl.day}/${dueDateCtrl.month}/${dueDateCtrl.year}'),
+      
+
+//POVIDER
+
+
+//userTaskNotifier
+//filter indivudual user tasks
+/* final userTaskNotifier = Provider<List<TaskData>>((ref){
+  final tasks = ref.watch(taskListProvider);
+  final userEmail = ref.watch(currentUserProvider);
+
+  return tasks.where((task)=> task.userEmail==userEmail).toList();
+}); */
+
+
+
+ /* ListView.builder(
+              itemBuilder: (context, index) {
+                Text(
+                  "NAME:  ${user.username}",
+                  style: const TextStyle(fontSize: 20),
+                );
+                const SizedBox(height: 10);
+                Text(
+                  "MAIL ID: ${user.email}",
+                  style: const TextStyle(fontSize: 20),
+                );
+                const SizedBox(height: 10);
+                Text(
+                  "Mobile Number:  ${user.phnum}",
+                  style: const TextStyle(fontSize: 20),
+                );
+                const SizedBox(height: 10);
+                Text(
+                  "Date Of Birth:  ${DateFormat('yyyy-MM-dd').format(user.dob!)}",
+                  style: const TextStyle(fontSize: 20),
+                );
+                const SizedBox(height: 10);
+                Text(
+                  "City:  ${user.city}",
+                  style: const TextStyle(fontSize: 20),
+                );
+                const SizedBox(height: 10);
+                Text(
+                  "Nationality:  ${user.country}",
+                  style: const TextStyle(fontSize: 20),
+                );
+                const SizedBox(height: 10);
+
+                Text(
+                  "GENDER:${user.gender}",
+                  style: const TextStyle(fontSize: 20),
+                );
+                SizedBox(height: 20);
+               
+                );
+              },
+            ), */
+
+
+
+            //settingLogOut
+
+             /*  ElevatedButton.icon(
+              onPressed: () async {
+                box.put('loggedIn', false);
+                await ref.read(authProvider.notifier).logout();
+              },
+
+              label: Text('LogOut'),
+            ), */
+
+
+
+
+
+            /* Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: const Color.fromARGB(255, 168, 223, 255),
+        boxShadow: [BoxShadow(color: Colors.black87, blurRadius: 5)],
+      ),
+
+      child: Expanded(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            //Top_Section
+            Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    task.title,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(fontWeight: FontWeight.w900, fontSize: 25),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    maxRadius: 8,
+                    backgroundColor: getPriorityColor(),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 15),
+            //Middle_Section
+            Text(
+              task.description,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+            ),
+            SizedBox(height: 5),
+            
+            Row(
+              children: [
+                Icon(Icons.calendar_month_outlined),
+                SizedBox(width: 5),
+                Text(
+                  '${task.duedate.day}/${task.duedate.month}/${task.duedate.year}',
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                ),
+              ],
+            ),
+
+            Spacer(),
+            //Bottom_Section
+            LinearProgressIndicator(
+              value: progress,
+              minHeight: 5,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.blue[300],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(task.status, style: TextStyle(fontSize: 15)),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    ); */
